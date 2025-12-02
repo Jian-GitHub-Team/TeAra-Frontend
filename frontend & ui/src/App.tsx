@@ -8,7 +8,7 @@ import StepNavigation from './components/StepNavigation';
 import IndoorMap from './components/IndoorMap';
 
 // ============================================================================
-// TYPE DEFINITIONS
+// TYPE DEFINITIONS.
 // ============================================================================
 
 export type Language = 'en' | 'zh' | 'mi';
