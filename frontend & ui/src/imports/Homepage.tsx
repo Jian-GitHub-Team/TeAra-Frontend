@@ -1,8 +1,9 @@
 import svgPaths from "./svg-vyj7vz77k0";
 import imgMap from "figma:asset/948540a80b08b11c7f9fea140c43d5fe43103d7e.png";
 import { imgGroup } from "./svg-vz0t5";
-import { Search, Plus, Minus, Check, Menu as MenuIcon, ChevronRight } from 'lucide-react';
+import { Search, Plus, Minus, Menu as MenuIcon, ChevronRight, Route, Clock } from 'lucide-react';
 import { useState } from 'react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 interface HomepageProps {
   onMenuClick?: () => void;
@@ -63,278 +64,6 @@ function StatusBarIPhone1313Pro() {
       <RightSide />
       <LeftSide />
     </div>
-  );
-}
-
-function ButtonIcon({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(33.33%+28px)] size-[24px] top-[254px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_767)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
-          </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </button>
-  );
-}
-
-function ButtonIcon1({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(66.67%-9px)] size-[24px] top-[609px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_767)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
-          </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </button>
-  );
-}
-
-function ButtonIcon2({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(33.33%+40px)] size-[24px] top-[559px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_767)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
-          </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </button>
-  );
-}
-
-function ButtonIcon3({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(16.67%+11.5px)] size-[24px] top-[463px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_767)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
-          </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </button>
-  );
-}
-
-function ButtonIcon4({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(66.67%-3px)] size-[24px] top-[402px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_767)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
-          </g>
-          <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </button>
-  );
-}
-
-function IconArrowSign() {
-  return (
-    <div className="relative size-[14.142px]" data-name="icon/arrow sign">
-      <div className="absolute inset-0" style={{ "--fill-0": "rgba(255, 255, 255, 1)" } as React.CSSProperties}>
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 15">
-          <g id="icon/arrow sign">
-            <rect fill="var(--fill-0, white)" height="14.1421" rx="1" width="14.1421" />
-            <path d={svgPaths.pf4041b2} fill="var(--fill-0, #ff5a5a)" id="Vector" />
-          </g>
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function Icon() {
-  return (
-    <div className="relative shrink-0 size-[24px]" data-name="icon">
-      <div className="absolute flex items-center justify-center left-1/2 size-[20px] top-1/2 translate-x-[-50%] translate-y-[-50%]" style={{ "--transform-inner-width": "14.140625", "--transform-inner-height": "14.140625" } as React.CSSProperties}>
-        <div className="flex-none rotate-[315deg]">
-          <IconArrowSign />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ButtonIcon5({ onClick }: { onClick?: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute bg-[#ff5a5a] box-border content-stretch flex gap-[4px] items-center justify-center left-[calc(83.33%-6.5px)] p-[8px] rounded-[100px] shadow-[0px_8px_12px_0px_rgba(0,0,0,0.3)] size-[56px] top-[759px] cursor-pointer hover:bg-[#ff4040] transition-colors"
-      data-name="button/icon"
-    >
-      <Icon />
-    </button>
-  );
-}
-
-function Location() {
-  return (
-    <div className="h-[79px] relative w-[69px]" data-name="location">
-      <div className="absolute bottom-[-0.38%] left-0 right-0 top-0">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 69 80">
-          <g>
-            <path d={svgPaths.p361f1200} fill="url(#paint0_linear_1_668)" id="Vector 2" />
-            <circle cx="35" cy="51" fill="var(--fill-0, #255AFF)" fillOpacity="0.1" r="28.15" stroke="var(--stroke-0, #95BCE1)" strokeWidth="0.3" />
-            <circle cx="35" cy="51" fill="var(--fill-0, #255AFF)" id="point" r="8" stroke="var(--stroke-0, white)" strokeWidth="4" />
-          </g>
-          <defs>
-            <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_668" x1="35" x2="35" y1="2" y2="50">
-              <stop stopColor="#255AFF" stopOpacity="0" />
-              <stop offset="1" stopColor="#255AFF" stopOpacity="0.2" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function Icon1() {
-  return (
-    <div className="relative shrink-0 size-[24px]" data-name="icon">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="icon">
-          <path d={svgPaths.pca0b500} fill="var(--fill-0, #2B2B2B)" id="Vector" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Cursor() {
-  return <div className="absolute bg-[#2b2b2b] h-[26px] left-[43px] top-[7px] w-[2px]" data-name="cursor" />;
-}
-
-function Input() {
-  return (
-    <div className="absolute bg-white box-border content-stretch flex gap-[8px] items-center left-[16px] px-[12px] py-[8px] rounded-[100px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)] top-[144px] w-[361px]" data-name="Input">
-      <Icon1 />
-      <div className="basis-0 flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold grow justify-center leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#cccccc] text-[16px]">
-        <p className="leading-[24px]">Search</p>
-      </div>
-      <Cursor />
-    </div>
-  );
-}
-
-function Menu() {
-  return (
-    <div className="relative shrink-0 size-[24px]" data-name="menu">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="menu">
-          <path d={svgPaths.p32dc8f00} fill="var(--fill-0, black)" id="icon" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame1({ onClick }: { onClick?: () => void }) {
-  return (
-    <button 
-      onClick={onClick}
-      className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 size-[29.33px] cursor-pointer hover:opacity-80 transition-opacity"
-    >
-      <MenuIcon className="size-6 text-black dark:text-white" strokeWidth={2} />
-    </button>
   );
 }
 
@@ -438,111 +167,48 @@ function Component() {
   );
 }
 
-function Frame() {
+function Location() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[316px]">
-      <Component />
-      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic relative shrink-0 text-[20px] text-black dark:text-white text-nowrap whitespace-pre">Campus Map</p>
-    </div>
-  );
-}
-
-function Title({ onMenuClick, showCampusPanel, onCampusClick, selectedCampus, onCampusSelect }: { 
-  onMenuClick?: () => void;
-  showCampusPanel?: boolean;
-  onCampusClick?: () => void;
-  selectedCampus?: string;
-  onCampusSelect?: (campus: string) => void;
-}) {
-  return (
-    <div className="absolute box-border content-stretch flex items-center justify-between left-0 px-[16px] py-[24px] top-[44px] w-[393px] z-20" data-name="title">
-      <Frame1 onClick={onMenuClick} />
-      <Frame />
-      <button onClick={onCampusClick} className="cursor-pointer hover:opacity-80 transition-opacity">
-        <ChevronRight className="size-6 text-black dark:text-white" strokeWidth={2} />
-      </button>
-      
-      {/* Campus Selection Panel */}
-      {showCampusPanel && (
-        <div className="absolute bg-[#f6f6f6] box-border content-stretch flex flex-col gap-[7px] items-start left-[calc(50%+36.5px)] overflow-clip px-[16px] py-[4px] rounded-[20px] top-[56px] w-[128px] z-30" data-name="Switch campus">
-          <button
-            onClick={() => onCampusSelect?.('hamilton')}
-            className="w-full text-left"
-          >
-            <p className={`font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic text-[20px] ${
-              selectedCampus === 'hamilton' ? 'text-[#ff5a5a]' : 'text-[rgba(0,0,0,0.6)] opacity-60'
-            }`}>
-              Hamilton
-            </p>
-          </button>
-          <button
-            onClick={() => onCampusSelect?.('tauranga')}
-            className="w-full text-left"
-          >
-            <p className={`font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic text-[20px] ${
-              selectedCampus === 'tauranga' ? 'text-[#ff5a5a]' : 'text-[rgba(0,0,0,0.6)] opacity-60'
-            }`}>
-              Tauranga
-            </p>
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function ButtonIcon6({ onClick, id }: { onClick?: () => void; id?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-[calc(33.33%+15px)] size-[24px] top-[644px] cursor-pointer hover:scale-110 transition-transform"
-      data-name="button/icon"
-      data-building-id={id}
-    >
-      <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <g filter="url(#filter0_d_1_656)" id="button/icon">
-            <rect fill="var(--fill-0, #ff5a5a)" height="24" rx="12" shapeRendering="crispEdges" width="24" x="12" y="4" />
-            <path d={svgPaths.p3da400} fill="var(--fill-0, white)" id="Vector" />
+    <div className="h-[79px] relative w-[69px]" data-name="location">
+      <div className="absolute bottom-[-0.38%] left-0 right-0 top-0">
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 69 80">
+          <g>
+            <path d={svgPaths.p361f1200} fill="url(#paint0_linear_1_668)" id="Vector 2" />
+            <circle cx="35" cy="51" fill="var(--fill-0, #255AFF)" fillOpacity="0.1" r="28.15" stroke="var(--stroke-0, #95BCE1)" strokeWidth="0.3" />
+            <circle cx="35" cy="51" fill="var(--fill-0, #255AFF)" id="point" r="8" stroke="var(--stroke-0, white)" strokeWidth="4" />
           </g>
           <defs>
-            <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_656" width="48" x="0" y="0">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-              <feOffset dy="8" />
-              <feGaussianBlur stdDeviation="6" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
-              <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_656" />
-              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_656" mode="normal" result="shape" />
-            </filter>
+            <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_668" x1="35" x2="35" y1="2" y2="50">
+              <stop stopColor="#255AFF" stopOpacity="0" />
+              <stop offset="1" stopColor="#255AFF" stopOpacity="0.2" />
+            </linearGradient>
           </defs>
         </svg>
       </div>
-    </button>
+    </div>
   );
 }
 
 function HomeIndicatorLight() {
   return (
     <div className="absolute bottom-0 h-[34px] left-0 w-[390px]" data-name="Home Indicator/Light">
-      <div className="absolute bg-black bottom-[8px] h-[5px] left-1/2 rounded-[100px] translate-x-[-50%] w-[134px]" data-name="Home Indicator" />
+      <div className="absolute bg-black dark:bg-white bottom-[8px] h-[5px] left-1/2 rounded-[100px] translate-x-[-50%] w-[134px]" data-name="Home Indicator" />
     </div>
   );
 }
 
 export default function Homepage({ onMenuClick, onBuildingClick, onFloatingButtonClick }: HomepageProps) {
   const [zoomLevel, setZoomLevel] = useState(1);
-  const [searchFocused, setSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showCampusPanel, setShowCampusPanel] = useState(false);
   const [selectedCampus, setSelectedCampus] = useState('hamilton');
-  const [recentSearches, setRecentSearches] = useState<string[]>([
-    'Student Centre',
-    'M Block',
-    'Library',
-  ]);
-  const [showRecentSearches, setShowRecentSearches] = useState(false);
+  const [showRecentSearch, setShowRecentSearch] = useState(false);
+
+  const recentSearches = [
+    { id: '1', name: 'M Block', type: 'Building' },
+    { id: '2', name: 'Student Centre', type: 'Building' },
+    { id: '3', name: 'Library', type: 'Building' },
+  ];
 
   const handleZoomIn = () => {
     setZoomLevel(prev => Math.min(prev + 0.2, 2));
@@ -552,66 +218,20 @@ export default function Homepage({ onMenuClick, onBuildingClick, onFloatingButto
     setZoomLevel(prev => Math.max(prev - 0.2, 0.6));
   };
 
-  const handleCampusClick = () => {
-    setShowCampusPanel(!showCampusPanel);
-  };
-
-  const handleCampusSelect = (campus: string) => {
-    setSelectedCampus(campus);
-    setShowCampusPanel(false);
-  };
-
-  const handleSearchFocus = () => {
-    setSearchFocused(true);
-    setShowRecentSearches(true);
-  };
-
-  const handleSearchBlur = () => {
-    // Delay to allow click on recent search items
-    setTimeout(() => {
-      setSearchFocused(false);
-      setShowRecentSearches(false);
-    }, 200);
-  };
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-    // Show recent searches only when input is empty or focused
-    if (e.target.value === '') {
-      setShowRecentSearches(true);
-    } else {
-      setShowRecentSearches(false);
-    }
-  };
-
-  const handleRecentSearchClick = (search: string) => {
-    setSearchQuery(search);
-    setShowRecentSearches(false);
-    // Here you could trigger a search action
-  };
-
-  const handleClearRecentSearches = () => {
-    setRecentSearches([]);
-  };
-
-  const addToRecentSearches = (search: string) => {
-    if (search.trim() === '') return;
-    setRecentSearches(prev => {
-      // Remove if already exists
-      const filtered = prev.filter(s => s !== search);
-      // Add to front and limit to 5
-      return [search, ...filtered].slice(0, 5);
-    });
-  };
-
   return (
     <div className="bg-white dark:bg-gray-900 relative size-full" data-name="Homepage">
       <div className="absolute bg-white dark:bg-gray-900 h-[852px] left-0 top-0 w-[393px]" data-name="background" />
-      <div className="absolute bottom-0 left-0 pointer-events-none top-0">
+      
+      {/* Status Bar */}
+      <div className="absolute bottom-0 h-[852px] left-0 pointer-events-none top-0">
         <StatusBarIPhone1313Pro />
       </div>
+      
+      {/* White background for Title and Search */}
       <div className="absolute bg-white dark:bg-gray-900 h-[96px] left-0 top-[48px] w-[390px]" />
-      <div className="absolute h-[731px] left-0 rounded-tl-[20px] rounded-tr-[20px] top-[121px] w-[393px] overflow-hidden" data-name="map">
+      
+      {/* Map */}
+      <div className="absolute h-[731px] left-0 rounded-tl-[20px] rounded-tr-[20px] top-[121px] w-[393px]" data-name="map">
         <img 
           alt="" 
           className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-tl-[20px] rounded-tr-[20px] size-full transition-transform duration-200" 
@@ -619,96 +239,188 @@ export default function Homepage({ onMenuClick, onBuildingClick, onFloatingButto
           style={{ transform: `scale(${zoomLevel})` }}
         />
       </div>
-      <ButtonIcon onClick={() => onBuildingClick?.('m-block')} id="m-block" />
-      <ButtonIcon1 onClick={() => onBuildingClick?.('g-block')} id="g-block" />
-      <ButtonIcon2 onClick={() => onBuildingClick?.('s-block')} id="s-block" />
-      <ButtonIcon3 onClick={() => onBuildingClick?.('a-block')} id="a-block" />
-      <ButtonIcon4 onClick={() => onBuildingClick?.('l-block')} id="l-block" />
-      <ButtonIcon5 onClick={onFloatingButtonClick} />
-      <div className="absolute flex h-[84.713px] items-center justify-center left-[calc(33.33%+52px)] top-[384px] w-[75.623px]" style={{ "--transform-inner-width": "69", "--transform-inner-height": "79" } as React.CSSProperties}>
+      
+      {/* Building Markers */}
+      <button onClick={() => onBuildingClick?.('m-block')} className="absolute left-[calc(33.33%+28px)] size-[24px] top-[254px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_767)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+            <defs>
+              <filter colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse" height="48" id="filter0_d_1_767" width="48" x="0" y="0">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="8" />
+                <feGaussianBlur stdDeviation="6" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_1_767" />
+                <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_767" mode="normal" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </button>
+      
+      <button onClick={() => onBuildingClick?.('g-block')} className="absolute left-[calc(66.67%-9px)] size-[24px] top-[609px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_767)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+      <button onClick={() => onBuildingClick?.('s-block')} className="absolute left-[calc(33.33%+40px)] size-[24px] top-[559px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_767)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+      <button onClick={() => onBuildingClick?.('a-block')} className="absolute left-[calc(16.67%+11.5px)] size-[24px] top-[463px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_767)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+      <button onClick={() => onBuildingClick?.('l-block')} className="absolute left-[calc(66.67%-3px)] size-[24px] top-[402px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_767)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+      <button onClick={() => onBuildingClick?.('student-centre')} className="absolute left-[calc(33.33%+15px)] size-[24px] top-[644px] cursor-pointer hover:scale-110 transition-transform z-10">
+        <div className="absolute inset-[-16.67%_-50%_-83.33%_-50%] pointer-events-none">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
+            <g filter="url(#filter0_d_1_656)">
+              <rect fill="#ff5a5a" height="24" rx="12" width="24" x="12" y="4" />
+              <path d={svgPaths.p3da400} fill="white" />
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+      {/* Floating Route Button */}
+      <button onClick={onFloatingButtonClick} className="absolute bg-gradient-to-br from-[#ff5a5a] to-[#ff4040] box-border content-stretch flex gap-[4px] items-center justify-center left-[calc(83.33%-6.5px)] p-[8px] rounded-[100px] shadow-[0px_8px_12px_0px_rgba(0,0,0,0.3)] size-[56px] top-[759px] cursor-pointer hover:scale-105 hover:shadow-[0px_8px_16px_0px_rgba(255,90,90,0.4)] transition-all z-10">
+        <Route className="size-7 text-white" strokeWidth={2} />
+      </button>
+      
+      {/* Current Location */}
+      <div className="absolute flex h-[84.713px] items-center justify-center left-[calc(33.33%+52px)] top-[384px] w-[75.623px] z-10" style={{ "--transform-inner-width": "69", "--transform-inner-height": "79" } as React.CSSProperties}>
         <div className="flex-none rotate-[355deg]">
           <Location />
         </div>
       </div>
       
-      {/* Interactive Search Bar */}
-      <div className="absolute left-[16px] top-[144px] w-[361px] z-20">
-        <div className={`bg-white dark:bg-gray-800 box-border flex gap-[8px] items-center px-[12px] py-[8px] rounded-[100px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)] transition-shadow ${
-          searchFocused ? 'shadow-[0px_4px_20px_0px_rgba(0,0,0,0.15)]' : ''
-        }`}>
-          <Search className="size-6 text-[#2B2B2B] dark:text-white flex-shrink-0" strokeWidth={2} />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            onFocus={handleSearchFocus}
-            onBlur={handleSearchBlur}
-            placeholder="Search"
-            className="flex-1 outline-none font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-black dark:text-white placeholder:text-[#cccccc] dark:placeholder:text-gray-500 bg-transparent"
-          />
+      {/* Search Input */}
+      <div className="absolute bg-white dark:bg-gray-800 box-border content-stretch flex gap-[8px] items-center left-[16px] px-[12px] py-[8px] rounded-[100px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)] top-[144px] w-[361px] z-20">
+        <Search className="size-6 text-[#2B2B2B] dark:text-white" strokeWidth={2} />
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onFocus={() => setShowRecentSearch(true)}
+          placeholder="Search"
+          className="flex-1 outline-none bg-transparent font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-black dark:text-white placeholder:text-[#cccccc] dark:placeholder:text-gray-500"
+        />
+      </div>
+      
+      {/* Recent Search Panel */}
+      {showRecentSearch && (
+        <div className="absolute bg-white dark:bg-gray-800 box-border flex flex-col left-[16px] overflow-hidden rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] top-[192px] w-[361px] z-30">
+          <div className="flex items-center justify-between px-[16px] py-[12px] border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-2">
+              <Clock className="size-5 text-gray-500 dark:text-gray-400" strokeWidth={2} />
+              <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[14px] text-gray-500 dark:text-gray-400">Recent</p>
+            </div>
+            <button onClick={() => setShowRecentSearch(false)} className="text-[#ff5a5a] font-['Inter:Semi_Bold',sans-serif] font-semibold text-[14px] hover:opacity-80 transition-opacity">
+              Clear
+            </button>
+          </div>
+          <div className="flex flex-col">
+            {recentSearches.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setSearchQuery(item.name);
+                  setShowRecentSearch(false);
+                  onBuildingClick?.(item.id);
+                }}
+                className="flex items-center justify-between px-[16px] py-[12px] hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] text-black dark:text-white">{item.name}</p>
+                <p className="font-['Inter:Regular',sans-serif] text-[14px] text-gray-500 dark:text-gray-400">{item.type}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Overlay to close recent search */}
+      {showRecentSearch && (
+        <div onClick={() => setShowRecentSearch(false)} className="absolute inset-0 z-[25]" />
+      )}
+      
+      {/* Title Bar */}
+      <div className="absolute box-border content-stretch flex items-center justify-between left-0 px-[16px] py-[24px] top-[44px] w-[393px] z-20">
+        <button onClick={onMenuClick} className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 size-[29.33px] cursor-pointer hover:opacity-80 transition-opacity">
+          <MenuIcon className="size-6 text-black dark:text-white" strokeWidth={2} />
+        </button>
+        
+        <div className="content-stretch flex items-center justify-between relative shrink-0 w-[316px]">
+          <Component />
+          <p className="font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic relative shrink-0 text-[20px] text-black dark:text-white text-nowrap whitespace-pre">Campus Map</p>
         </div>
         
-        {/* Recent Searches Dropdown */}
-        {showRecentSearches && recentSearches.length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-2xl shadow-[0px_8px_24px_0px_rgba(0,0,0,0.12)] overflow-hidden animate-slide-up z-50">
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-gray-700">
-              <span className="text-sm text-gray-500 dark:text-gray-400 font-['Inter:Semi_Bold',sans-serif]">
-                Recent Searches
-              </span>
-              {recentSearches.length > 0 && (
-                <button
-                  onClick={handleClearRecentSearches}
-                  className="text-xs text-[#ff5a5a] hover:text-[#ff4040] font-['Inter:Semi_Bold',sans-serif]"
-                >
-                  Clear All
-                </button>
-              )}
-            </div>
-            
-            {/* Recent Search Items */}
-            <div className="max-h-[240px] overflow-y-auto">
-              {recentSearches.map((search, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleRecentSearchClick(search)}
-                  className="w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-3 group"
-                >
-                  <Search className="size-4 text-gray-400 group-hover:text-[#ff5a5a] transition-colors flex-shrink-0" strokeWidth={2} />
-                  <span className="text-[15px] text-black dark:text-white font-['Inter:Medium',sans-serif]">
-                    {search}
-                  </span>
-                </button>
-              ))}
-            </div>
+        <button onClick={() => setShowCampusPanel(!showCampusPanel)} className="relative shrink-0 size-[24px] cursor-pointer hover:opacity-80 transition-opacity">
+          <ChevronRight className="size-6 text-black dark:text-white" strokeWidth={2} />
+        </button>
+        
+        {/* Campus Panel */}
+        {showCampusPanel && (
+          <div className="absolute bg-[#f6f6f6] dark:bg-gray-800 box-border content-stretch flex flex-col gap-[7px] items-start left-[calc(50%+36.5px)] overflow-clip px-[16px] py-[4px] rounded-[20px] top-[56px] w-[128px] z-30">
+            <button onClick={() => { setSelectedCampus('hamilton'); setShowCampusPanel(false); }} className="w-full text-left">
+              <p className={`font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic text-[20px] ${selectedCampus === 'hamilton' ? 'text-[#ff5a5a]' : 'text-[rgba(0,0,0,0.6)] dark:text-gray-400 opacity-60'}`}>Hamilton</p>
+            </button>
+            <button onClick={() => { setSelectedCampus('tauranga'); setShowCampusPanel(false); }} className="w-full text-left">
+              <p className={`font-['Inter:Bold',sans-serif] font-bold leading-[1.4] not-italic text-[20px] ${selectedCampus === 'tauranga' ? 'text-[#ff5a5a]' : 'text-[rgba(0,0,0,0.6)] dark:text-gray-400 opacity-60'}`}>Tauranga</p>
+            </button>
           </div>
         )}
       </div>
-
-      <Title onMenuClick={onMenuClick} showCampusPanel={showCampusPanel} onCampusClick={handleCampusClick} selectedCampus={selectedCampus} onCampusSelect={handleCampusSelect} />
-      <ButtonIcon6 onClick={() => onBuildingClick?.('student-centre')} id="student-centre" />
       
-      {/* Interactive Zoom Controls */}
+      {/* Zoom Controls */}
       <div className="absolute bottom-[35px] left-[16px] h-[81px] w-[40px] z-20">
         <div className="bg-white dark:bg-gray-800 rounded-[14px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] h-full w-full flex flex-col items-center justify-between py-2">
-          <button 
-            onClick={handleZoomIn}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-            aria-label="Zoom in"
-          >
+          <button onClick={handleZoomIn} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
             <Plus className="size-5 text-black dark:text-white" strokeWidth={2} />
           </button>
           <div className="h-px w-[28.5714px] bg-[#E6E6E6] dark:bg-gray-600" />
-          <button 
-            onClick={handleZoomOut}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-            aria-label="Zoom out"
-          >
+          <button onClick={handleZoomOut} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
             <Minus className="size-5 text-black dark:text-white" strokeWidth={2} />
           </button>
         </div>
       </div>
-
+      
       <HomeIndicatorLight />
     </div>
   );

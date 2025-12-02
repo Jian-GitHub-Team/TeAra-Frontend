@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUp, ChevronUp, Navigation2, Compass } from 'lucide-react';
+import { ArrowUp, ChevronUp, Navigation2, Compass, X } from 'lucide-react';
 import { Building, Language, Theme, RoutePreference } from '../App';
 import imgMap from "figma:asset/948540a80b08b11c7f9fea140c43d5fe43103d7e.png";
 import imgIndoorMap from "figma:asset/46c55aef4864e0dd5a25689ecf3745917d8c6dcb.png";
@@ -146,7 +146,7 @@ export default function StepNavigation({
 
       {/* Top Instruction Banner */}
       <div className="absolute top-[60px] left-4 right-4 z-40">
-        <div className="bg-gradient-to-r from-[#2E7D5F] to-[#3A9B75] rounded-2xl shadow-2xl px-6 py-4 flex items-center gap-4">
+        <div className="bg-gradient-to-r from-[#ff5a5a] to-[#ff4040] rounded-2xl shadow-2xl px-6 py-4 flex items-center gap-4">
           {/* Direction Icon */}
           <div className="flex-shrink-0">
             {getDirectionIcon()}
@@ -158,6 +158,15 @@ export default function StepNavigation({
               {getInstruction(currentStepData)}
             </p>
           </div>
+          
+          {/* Exit Navigation Button */}
+          <button
+            onClick={onBack}
+            className="flex-shrink-0 p-2 hover:bg-white/20 rounded-full transition-colors"
+            aria-label="Exit navigation"
+          >
+            <X className="size-6 text-white" strokeWidth={2.5} />
+          </button>
         </div>
       </div>
 
@@ -196,11 +205,8 @@ export default function StepNavigation({
             <div>
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-black dark:text-white">
-                    {currentStepData.distance}
-                  </span>
                   <span className="text-gray-500 dark:text-gray-400 text-sm">
-                    • {language === 'en' ? `Step ${currentStep + 1}/${steps.length}` : language === 'zh' ? `第 ${currentStep + 1}/${steps.length} 步` : `Whakaaturanga ${currentStep + 1}/${steps.length}`}
+                    {language === 'en' ? `Step ${currentStep + 1}/${steps.length}` : language === 'zh' ? `第 ${currentStep + 1}/${steps.length} 步` : `Whakaaturanga ${currentStep + 1}/${steps.length}`}
                   </span>
                 </div>
               </div>
@@ -208,7 +214,7 @@ export default function StepNavigation({
               {/* Progress bar */}
               <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
                 <div
-                  className="h-full bg-gradient-to-r from-[#2E7D5F] to-[#3A9B75] transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-[#ff5a5a] to-[#ff4040] transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -217,7 +223,7 @@ export default function StepNavigation({
               {currentStep < steps.length - 1 && (
                 <button
                   onClick={handleNext}
-                  className="w-full bg-gradient-to-r from-[#2E7D5F] to-[#3A9B75] text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+                  className="w-full bg-gradient-to-r from-[#ff5a5a] to-[#ff4040] text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all"
                 >
                   {language === 'en' ? 'Continue' : language === 'zh' ? '继续' : 'Haere tonu'}
                 </button>
@@ -226,7 +232,7 @@ export default function StepNavigation({
               {currentStep === steps.length - 1 && (
                 <button
                   onClick={onBack}
-                  className="w-full bg-gradient-to-r from-[#2E7D5F] to-[#3A9B75] text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+                  className="w-full bg-gradient-to-r from-[#ff5a5a] to-[#ff4040] text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all"
                 >
                   {language === 'en' ? 'Finish Navigation' : language === 'zh' ? '完成导航' : 'Whakaoti i te Whakatere'}
                 </button>
@@ -245,9 +251,9 @@ export default function StepNavigation({
                     key={step.id}
                     className={`p-4 rounded-xl transition-all ${
                       index === currentStep
-                        ? 'bg-gradient-to-r from-[#2E7D5F]/20 to-[#3A9B75]/20 border-2 border-[#2E7D5F]'
+                        ? 'bg-gradient-to-r from-[#ff5a5a]/20 to-[#ff4040]/20 border-2 border-[#ff5a5a]'
                         : index < currentStep
-                        ? 'bg-green-50 dark:bg-green-900/20 opacity-60'
+                        ? 'bg-red-50 dark:bg-red-900/20 opacity-60'
                         : 'bg-gray-50 dark:bg-gray-700'
                     }`}
                   >
@@ -255,9 +261,9 @@ export default function StepNavigation({
                       {/* Step number circle */}
                       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold ${
                         index === currentStep
-                          ? 'bg-[#2E7D5F] text-white'
+                          ? 'bg-[#ff5a5a] text-white'
                           : index < currentStep
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-red-500 text-white'
                           : 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
                       }`}>
                         {index < currentStep ? '✓' : index + 1}
@@ -269,8 +275,6 @@ export default function StepNavigation({
                           {getInstruction(step)}
                         </p>
                         <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-                          <span className="font-semibold text-[#2E7D5F]">{step.distance}</span>
-                          <span>•</span>
                           <span>
                             {step.type === 'walk' && (language === 'en' ? 'Walk' : language === 'zh' ? '步行' : 'Haere')}
                             {step.type === 'stairs' && (language === 'en' ? 'Stairs' : language === 'zh' ? '楼梯' : 'Arawhata')}

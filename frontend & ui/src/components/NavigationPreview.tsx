@@ -80,23 +80,6 @@ export default function NavigationPreview({
 
           {/* Route Details */}
           <div className="mb-6">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="text-center">
-                <p className="text-3xl text-[#ff5a5a] font-bold">{distance}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {language === 'en' ? 'Distance' : '距离'}
-                </p>
-              </div>
-
-              <div className="h-12 w-px bg-gray-300 dark:bg-gray-600" />
-              <div className="text-center">
-                <p className="text-3xl text-[#ff5a5a] font-bold">{duration}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {language === 'en' ? 'Duration' : '时长'}
-                </p>
-              </div>
-            </div>
-
             <div className="space-y-3">
               {/* From */}
               <div className="flex items-center gap-3">

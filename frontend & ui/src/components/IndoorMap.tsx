@@ -1,4 +1,4 @@
-import { ArrowLeft, ZoomIn, ZoomOut, Search } from 'lucide-react';
+import { ArrowLeft, ZoomIn, ZoomOut, Search, MapPin, Navigation } from 'lucide-react';
 import { useState } from 'react';
 import { Building, Language, Theme } from '../App';
 import svgPaths from "../imports/svg-thjg8xekjb";
